@@ -1,8 +1,3 @@
-plugins {
-	id 'org.springframework.boot'
-	id 'io.spring.dependency-management'
-	id 'java'
-}
 
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
@@ -14,6 +9,8 @@ repositories {
 ext {
 	set('azureVersion', "2.2.0")
 }
+
+apply from: 'gradle-local/custom.gradle'
 
 dependencies {
 
