@@ -1,25 +1,3 @@
-
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
-
-repositories {
-	mavenCentral()
-}
-
-ext {
-	set('azureVersion', "2.2.0")
-}
-
 apply from: 'gradle-local/custom.gradle'
 
-dependencies {
-
-}
-dependencyManagement {
-    imports {
-      mavenBom "com.microsoft.azure:azure-spring-boot-bom:${azureVersion}"
-    }
-  }
-test {
-	useJUnitPlatform()
-}
